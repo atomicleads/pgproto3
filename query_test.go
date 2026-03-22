@@ -3,7 +3,7 @@ package pgproto3_test
 import (
 	"testing"
 
-	"github.com/atomicleads/pgproto3/v2"
+	"github.com/jackc/pgproto3/v2"
 	"github.com/stretchr/testify/require"
 )
 
