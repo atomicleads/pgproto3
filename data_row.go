@@ -52,7 +52,7 @@ func (dst *DataRow) Decode(src []byte) error {
 		if msgSize == -1 {
 			dst.Values[i] = nil
 		} else {
-			if len(src[rp:]) < msgSize {
+			if msgSize < 0 || len(src[rp:]) < msgSize {
 				return &invalidMessageFormatErr{messageType: "DataRow"}
 			}
 
